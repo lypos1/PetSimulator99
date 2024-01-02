@@ -4,68 +4,38 @@
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
 local Loading = Instance.new("Frame")
-local Loading_2 = Instance.new("Frame")
-local GIF = Instance.new("ImageLabel")
-local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-local Subtitle = Instance.new("TextLabel")
 local Title = Instance.new("TextLabel")
-local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local Subtitle = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
+Frame.Parent = ScreenGui
+Frame.Active = true
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(28, 85, 85)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame.Selectable = true
+Frame.Size = UDim2.new(2, 0, 2, 0)
+
 Loading.Name = "Loading"
 Loading.Parent = ScreenGui
 Loading.AnchorPoint = Vector2.new(0, 0.5)
 Loading.BackgroundColor3 = Color3.fromRGB(21, 63, 63)
+Loading.BackgroundTransparency = 1.000
 Loading.BorderSizePixel = 0
 Loading.Position = UDim2.new(0, 0, 0.5, 0)
-Loading.Size = UDim2.new(1.25, 0, 1.25, 0)
-
-Loading_2.Name = "Loading"
-Loading_2.Parent = Loading
-Loading_2.AnchorPoint = Vector2.new(0, 0.5)
-Loading_2.BackgroundColor3 = Color3.fromRGB(21, 63, 63)
-Loading_2.BorderSizePixel = 0
-Loading_2.Position = UDim2.new(0, 0, 0.5, 0)
-Loading_2.Size = UDim2.new(1, 0, 0.600000024, 0)
-
-GIF.Name = "GIF"
-GIF.Parent = Loading_2
-GIF.AnchorPoint = Vector2.new(0.5, 0.5)
-GIF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-GIF.BackgroundTransparency = 1.000
-GIF.BorderSizePixel = 0
-GIF.Position = UDim2.new(0.5, 0, 0.5, 0)
-GIF.Size = UDim2.new(1, 0, 0.125, 0)
-GIF.ZIndex = 2
-GIF.Image = "rbxassetid://6942540874"
-GIF.ImageRectSize = Vector2.new(100, 100)
-GIF.TileSize = UDim2.new(5, 0, 5, 0)
-
-UIAspectRatioConstraint.Parent = GIF
-
-Subtitle.Name = "Subtitle"
-Subtitle.Parent = Loading_2
-Subtitle.AnchorPoint = Vector2.new(0.5, 1)
-Subtitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Subtitle.BackgroundTransparency = 1.000
-Subtitle.BorderSizePixel = 0
-Subtitle.LayoutOrder = 2
-Subtitle.Position = UDim2.new(0.5, 0, 0.699999988, 0)
-Subtitle.Size = UDim2.new(0.300000012, 0, 0.075000003, 0)
-Subtitle.Font = Enum.Font.Unknown
-Subtitle.Text = "Please do not leave!"
-Subtitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-Subtitle.TextScaled = true
-Subtitle.TextSize = 18.000
-Subtitle.TextWrapped = true
+Loading.Size = UDim2.new(1, 0, 0.600000024, 0)
 
 Title.Name = "Title"
-Title.Parent = Loading_2
+Title.Parent = Loading
 Title.AnchorPoint = Vector2.new(0.5, 0.5)
 Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Title.BackgroundTransparency = 1.000
@@ -80,5 +50,30 @@ Title.TextScaled = true
 Title.TextSize = 18.000
 Title.TextWrapped = true
 
-UIAspectRatioConstraint_2.Parent = ScreenGui
-UIAspectRatioConstraint_2.AspectRatio = 2.115
+Subtitle.Name = "Subtitle"
+Subtitle.Parent = Loading
+Subtitle.AnchorPoint = Vector2.new(0.5, 1)
+Subtitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Subtitle.BackgroundTransparency = 1.000
+Subtitle.BorderSizePixel = 0
+Subtitle.LayoutOrder = 2
+Subtitle.Position = UDim2.new(0.5, 0, 0.699999988, 0)
+Subtitle.Size = UDim2.new(0.300000012, 0, 0.075000003, 0)
+Subtitle.Font = Enum.Font.Unknown
+Subtitle.Text = "Please do not leave!"
+Subtitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Subtitle.TextScaled = true
+Subtitle.TextSize = 18.000
+Subtitle.TextWrapped = true
+
+ImageLabel.Parent = ScreenGui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.469238788, 0, 0.44432193, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxassetid://6942540874"
+ImageLabel.ImageRectSize = Vector2.new(100, 100)
+
+UIAspectRatioConstraint.Parent = ImageLabel
