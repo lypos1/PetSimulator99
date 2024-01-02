@@ -1,0 +1,84 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Loading = Instance.new("Frame")
+local Loading_2 = Instance.new("Frame")
+local GIF = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Subtitle = Instance.new("TextLabel")
+local Title = Instance.new("TextLabel")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Loading.Name = "Loading"
+Loading.Parent = ScreenGui
+Loading.AnchorPoint = Vector2.new(0, 0.5)
+Loading.BackgroundColor3 = Color3.fromRGB(21, 63, 63)
+Loading.BorderSizePixel = 0
+Loading.Position = UDim2.new(0, 0, 0.5, 0)
+Loading.Size = UDim2.new(1, 0, 1, 0)
+
+Loading_2.Name = "Loading"
+Loading_2.Parent = Loading
+Loading_2.AnchorPoint = Vector2.new(0, 0.5)
+Loading_2.BackgroundColor3 = Color3.fromRGB(21, 63, 63)
+Loading_2.BorderSizePixel = 0
+Loading_2.Position = UDim2.new(0, 0, 0.5, 0)
+Loading_2.Size = UDim2.new(1, 0, 0.600000024, 0)
+
+GIF.Name = "GIF"
+GIF.Parent = Loading_2
+GIF.AnchorPoint = Vector2.new(0.5, 0.5)
+GIF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GIF.BackgroundTransparency = 1.000
+GIF.BorderSizePixel = 0
+GIF.Position = UDim2.new(0.5, 0, 0.5, 0)
+GIF.Size = UDim2.new(1, 0, 0.125, 0)
+GIF.ZIndex = 2
+GIF.Image = "rbxassetid://6942540874"
+GIF.ImageRectSize = Vector2.new(100, 100)
+GIF.TileSize = UDim2.new(5, 0, 5, 0)
+
+UIAspectRatioConstraint.Parent = GIF
+
+Subtitle.Name = "Subtitle"
+Subtitle.Parent = Loading_2
+Subtitle.AnchorPoint = Vector2.new(0.5, 1)
+Subtitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Subtitle.BackgroundTransparency = 1.000
+Subtitle.BorderSizePixel = 0
+Subtitle.LayoutOrder = 2
+Subtitle.Position = UDim2.new(0.5, 0, 0.699999988, 0)
+Subtitle.Size = UDim2.new(0.300000012, 0, 0.075000003, 0)
+Subtitle.Font = Enum.Font.Unknown
+Subtitle.Text = "Please do not leave!"
+Subtitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Subtitle.TextScaled = true
+Subtitle.TextSize = 18.000
+Subtitle.TextWrapped = true
+
+Title.Name = "Title"
+Title.Parent = Loading_2
+Title.AnchorPoint = Vector2.new(0.5, 0.5)
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderSizePixel = 0
+Title.LayoutOrder = 2
+Title.Position = UDim2.new(0.5, 0, 0.349999994, 0)
+Title.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+Title.Font = Enum.Font.Unknown
+Title.Text = "Processing..."
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 18.000
+Title.TextWrapped = true
+
+UIAspectRatioConstraint_2.Parent = ScreenGui
+UIAspectRatioConstraint_2.AspectRatio = 2.115
