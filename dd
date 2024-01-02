@@ -23,7 +23,7 @@ Loading.AnchorPoint = Vector2.new(0, 0.5)
 Loading.BackgroundColor3 = Color3.fromRGB(21, 63, 63)
 Loading.BorderSizePixel = 0
 Loading.Position = UDim2.new(0, 0, 0.5, 0)
-Loading.Size = UDim2.new(1, 0, 1, 0)
+Loading.Size = UDim2.new(1.25, 0, 1.25, 0)
 
 Loading_2.Name = "Loading"
 Loading_2.Parent = Loading
