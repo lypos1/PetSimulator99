@@ -13,3 +13,7 @@ for i,v in pairs(save.Pet) do
             unpack(args))
     end
 end
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Daycare: Claim"):InvokeServer()
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Claim All"):InvokeServer()
