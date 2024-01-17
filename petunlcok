@@ -1,0 +1,15 @@
+local lib = require(game.ReplicatedStorage.Library)
+local save = lib.Save.Get().Inventory
+for i,v in pairs(save.Pet) do
+    local id = v.id
+    local dir = lib.Directory.Pets[id]
+    if dir.exclusiveLevel or dir.huge then
+    if v._lk then
+        local args = {
+            [1] = i,
+            [2] = false
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Locking_SetLocked"):InvokeServer(
+            unpack(args))
+    end
+end
