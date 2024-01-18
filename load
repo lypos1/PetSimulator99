@@ -1,0 +1,67 @@
+        game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+        game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+        game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
+        game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local Icon = Instance.new("ImageLabel")
+local Subtitle = Instance.new("TextLabel")
+local Header = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(0.5, 0, 0.460000008, 0)
+Frame.Size = UDim2.new(1.25, 0, 1.25, 0)
+
+UIListLayout.Parent = Frame
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout.Padding = UDim.new(0, 10)
+
+Icon.Name = "Icon"
+Icon.Parent = Frame
+Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon.BackgroundTransparency = 1.000
+Icon.LayoutOrder = 1
+Icon.Position = UDim2.new(0.34357366, 0, 0.462474853, 0)
+Icon.Size = UDim2.new(0.200000003, 100, 0.200000003, 100)
+Icon.Image = "rbxassetid://5152571106"
+Icon.ScaleType = Enum.ScaleType.Fit
+
+Subtitle.Name = "Subtitle"
+Subtitle.Parent = Frame
+Subtitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Subtitle.BackgroundTransparency = 1.000
+Subtitle.LayoutOrder = 3
+Subtitle.Size = UDim2.new(0.699999988, 0, 0.00700000022, 15)
+Subtitle.Font = Enum.Font.GothamBlack
+Subtitle.Text = "Please wait while we redirect you..."
+Subtitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Subtitle.TextScaled = true
+Subtitle.TextSize = 15.000
+Subtitle.TextWrapped = true
+
+Header.Name = "Header"
+Header.Parent = Frame
+Header.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Header.BackgroundTransparency = 1.000
+Header.LayoutOrder = 2
+Header.Size = UDim2.new(0.75, 0, 0.0199999996, 20)
+Header.Font = Enum.Font.GothamBlack
+Header.Text = "We're restarting Pet Simulator 99!"
+Header.TextColor3 = Color3.fromRGB(255, 255, 255)
+Header.TextScaled = true
+Header.TextSize = 30.000
+Header.TextWrapped = true
