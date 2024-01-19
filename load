@@ -65,3 +65,4 @@ Header.TextColor3 = Color3.fromRGB(255, 255, 255)
 Header.TextScaled = true
 Header.TextSize = 30.000
 Header.TextWrapped = true
+coroutine.wrap(IQBYXB_fake_script)()
